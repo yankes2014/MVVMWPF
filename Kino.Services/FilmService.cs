@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Kino.Services
 {
-    public class FilmService: IFilmService
+    public class FilmService : IFilmService
     {
         private IRepository<Film> _repository;
 

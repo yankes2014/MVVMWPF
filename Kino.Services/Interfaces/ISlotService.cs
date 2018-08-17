@@ -11,6 +11,6 @@ namespace Kino.Services.Interfaces
     {
         Task<ICollection<Slot>> GetSlotsAsync(string name);
         Task<ICollection<Slot>> GetFreeSlotsAsync(string name);
-        Task  UpdateSLot(Slot slot);
+        Task UpdateSLot(Slot slot);
     }
 }

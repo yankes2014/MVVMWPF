@@ -56,10 +56,6 @@ namespace Kino.Repository
             return await _db.Set<T>().AsNoTracking().Where(predicate).AsNoTracking().ToListAsync();
         }
 
-        public async Task<T> GetByUzAsync(string uz)
-        {
-            return await _db.Set<T>().FindAsync(uz);
-        }
 
         public async Task<T> GetById(int id)
         {

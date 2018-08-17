@@ -15,7 +15,6 @@ namespace Kino.Repository
         Task UpdateAsync(T item, int? id);
         Task<ICollection<T>> GetByFuncAsync(Expression<Func<T, bool>> predicate);
         Task<T> GetSingleByFunc(Expression<Func<T, bool>> predicate);
-        Task<T> GetByUzAsync(string uz);
         Task<T> GetById(int id);
         Task SaveChangesAsync();
         DbEntityEntry<T> Entry(T entity);
