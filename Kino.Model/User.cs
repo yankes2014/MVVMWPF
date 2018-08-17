@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Kino.Model
 {
-    public class Class1
+    public class User
     {
+        public int ID { get; set; }
+        public string Imie { get; set; }
+        public string Nazwisko { get; set; }
+
     }
 }

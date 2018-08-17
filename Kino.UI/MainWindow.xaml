@@ -1,0 +1,36 @@
+﻿<Window x:Class="Kino.UI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kino.UI"
+             xmlns:prism="http://prismlibrary.com/"
+        
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="9*"/>
+        </Grid.RowDefinitions>
+        <ComboBox Name="ComboBox1" HorizontalAlignment="Left"  
+              Width="194" Height="30" SelectedItem="{Binding SelectedFilm}">
+            <ComboBoxItem Content="Gwiezdne Wojny"></ComboBoxItem>
+            <ComboBoxItem Content="DeadPool"></ComboBoxItem>
+        </ComboBox>
+        <Label Grid.Row="1" Content="Wybrany widok:"/>
+        <Label Grid.Row="1" Grid.Column="1" Content="{Binding SelectedView, UpdateSourceTrigger=PropertyChanged}"/>
+        <ContentControl Grid.Row="2" Grid.ColumnSpan="4" prism:RegionManager.RegionName="PanelRegion"/>
+        <Button Grid.Column="1" Width="100" Height="50" Content="Pokaz miejsca" Command="{Binding ShowSlots}"/>
+        <Button Grid.Column="2" Content="Pokaz Wolne" Width="100" Height="50" Command="{Binding ShowFreeSlots}"/>
+        <Button Grid.Column="3" Content="Informacje o repertuarze" Width="150" Height="50" Command="{Binding AboutFilm}"/>
+    </Grid>
+</Window>
